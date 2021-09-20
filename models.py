@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Date, Float, Integer, String
+from sqlalchemy import create_engine, Column, Date, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -15,7 +15,7 @@ class Book(Base):
     title = Column(String)
     author = Column(String)
     date_published = Column(Date)
-    price = Column(Float)
+    price = Column(Integer)
 
     def __repr__(self):
         return f'<User(title={self.title} author={self.author} date_published={self.date_published} price={self.price})>'
